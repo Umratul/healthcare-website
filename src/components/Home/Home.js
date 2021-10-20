@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 import Service from '../Service/Service';
+import Banner from './Banner/Banner';
 
 import './Home.css'
 
@@ -16,18 +17,10 @@ const Home = () => {
     const sliceService = services.slice(0, 6);
     return (
         <div>
-            <div className="title-section p-3">
-               
-                <div className="p-5 bg-img">
-                    <h1>User:{user.displayName }</h1>
-                    <h3 className="text-dark">Become a <span className="text-danger">Master Chef</span></h3>
-                    <p>Helping you to be a chef at your own house...</p>
-                </div>
-
-            </div>
+            <Banner></Banner>
 
             <div>
-                <h1 className="text-dark fst-italic bg-danger p-3">Our Cooking Courses</h1>
+                <h1 className="text-dark fst-italic p-3">Our Treatments</h1>
                 
             <div className="service-container">
                 {

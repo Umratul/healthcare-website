@@ -10,7 +10,10 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import Contact from './components/Contact/Contact';
+import Appointment from './components/Appointment/Appointment';
+
+import NotFound from './components/NotFound/NotFound';
+import Dentists from './components/Dentists/Dentists';
 
 
 function App() {
@@ -29,8 +32,11 @@ function App() {
           <PrivateRoute path="/services">
             <Services></Services>
           </PrivateRoute>
-          <PrivateRoute path="/contact">
-            <Contact></Contact>
+          <PrivateRoute path="/appointment">
+            <Appointment></Appointment>
+          </PrivateRoute>
+          <PrivateRoute path="/dentists">
+            <Dentists></Dentists>
           </PrivateRoute>
           <Route path="/login">
             <Login></Login>
@@ -38,13 +44,13 @@ function App() {
           <Route path="/register">
             <Register></Register>
           </Route>
-          
-          <Route path="/footer">
-            <Footer></Footer>
+          <Route path="*">
+            <NotFound></NotFound>
           </Route>
           
           
-        </Switch>
+          </Switch>
+          <Footer></Footer>
       </Router>
      
       </AuthProvider>
